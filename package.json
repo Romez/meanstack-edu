@@ -1,0 +1,33 @@
+{
+  "name": "meanstack-edu",
+  "version": "1.0.0",
+  "description": "education mean stack",
+  "main": "index.js",
+  "scripts": {
+    "server": "nodemon index"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Romez/meanstack-edu.git"
+  },
+  "author": "Roman Ushakov",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Romez/meanstack-edu/issues"
+  },
+  "homepage": "https://github.com/Romez/meanstack-edu#readme",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.18.3",
+    "cors": "^2.8.4",
+    "express": "^4.16.3",
+    "jsonwebtoken": "^8.3.0",
+    "mongoose": "^5.2.3",
+    "morgan": "^1.9.0",
+    "passport": "^0.4.0",
+    "passport-jwt": "^4.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.2"
+  }
+}
