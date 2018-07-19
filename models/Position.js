@@ -12,11 +12,11 @@ const positionSchema = new Schema({
   },
   category: {
     ref: 'categories',
-    type: mongoose.Types.ObjectId
+    type: Schema.Types.ObjectId
   },
   user: {
     ref: 'users',
-    type: mongoose.Types.ObjectId
+    type: Schema.Types.ObjectId
   }
 })
 
