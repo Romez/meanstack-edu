@@ -12,13 +12,14 @@ const app = experss()
 
 mongoose.connect(keys.mongoURI, { useNewUrlParser: true })
   .then(() => {console.log('connected')})
-  .catch((err) => console.log(err))
+  .catch((err) => console.log(`Mongo connection error: ${err}`))
 
 app.use(passport.initialize())
 require('./middleware/passport')(passport)
 
-app.use(require('cors')())
 app.use(require('morgan')('dev'))
+app.use('/uploads', experss.static('uploads'))
+app.use(require('cors')())
 app.use(bodyParser.urlencoded({extended: true}))
 app.use(bodyParser.json())
 
