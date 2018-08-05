@@ -21,6 +21,7 @@ app.use(require('cors')())
 app.use(require('morgan')('dev'))
 app.use(bodyParser.urlencoded({extended: true}))
 app.use(bodyParser.json())
+app.use('/uploads', experss.static('uploads'))
 
 app.use('/api/auth', authRoute)
 app.use('/api/analytic', analyticRoute)

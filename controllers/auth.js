@@ -31,7 +31,12 @@ module.exports.login = async (req, res) => {
 }
 
 module.exports.register = async (req, res) => {
-  const {email} = req.body
+  const {email, password} = req.body
+
+  if (email === undefined || password === undefined) {
+    res.status(419).json({message: 'wrong params'})
+  }
+
   const candidate = await User.findOne({email})
 
   if (candidate) {
