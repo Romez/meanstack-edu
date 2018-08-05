@@ -2,11 +2,10 @@ const Category = require('../models/Category')
 const Position = require('../models/Position')
 const errorHandler = require('../utils/errorHandler')
 
-
 module.exports.getAll = async (req, res) => {
   try {
     const categories = await Category.find({user: req.user.id})
-    res.status (200).json(categories)
+    res.status(200).json(categories)
   } catch (e) {
     errorHandler(res, e)
   }
@@ -36,8 +35,6 @@ module.exports.remove = async (req, res) => {
 
 module.exports.create = async (req, res) => {
   try {
-    console.log(req.file)
-
     const category = new Category({
       name: req.body.name,
       user: req.user.id,
